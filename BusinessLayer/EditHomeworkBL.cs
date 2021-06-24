@@ -18,7 +18,6 @@ namespace BusinessLayer
                 if (String.IsNullOrEmpty(Convert.ToString(homework.HomeWorkID)))
                     success = false;
                 else if (homework.HomeWorkID <= 0)
-
                     success = false;
 
                 if (string.IsNullOrEmpty(homework.Description))

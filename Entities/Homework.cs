@@ -18,6 +18,5 @@ namespace Entities
 
         public string LongDescription { get; set; }
 
-       
     }
 }
