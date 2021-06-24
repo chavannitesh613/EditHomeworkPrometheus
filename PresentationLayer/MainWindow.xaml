@@ -1,0 +1,62 @@
+﻿<Window x:Class="PresentationLayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationLayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/bgimg.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" Background="#FFEACECE">
+                <MenuItem Header="Sign-In">
+                    <MenuItem Header="Student" Name="menuStudentLogin" Click="menuStudentLogin_Click"/>
+                    <MenuItem Header="Teacher" Name="menuTeacherLogin" Click="menuTeacherLogin_Click"/>
+                    <MenuItem Header="Admin" Name="menuAdminLogin" Click="menuAdminLogin_Click"/>
+                </MenuItem>
+                <MenuItem Header="Register">
+                    <MenuItem Header="Student"/>
+                    <MenuItem Header="Teacher"/>
+                </MenuItem>
+                <MenuItem Header="Search">
+                </MenuItem>
+            </Menu>
+            <StackPanel/>
+        </DockPanel>
+        <Label Content="HomeWork Id" Height="50" FontSize="30"></Label>
+        <ComboBox Name="txtHomeWorkId" Height="50" Width="170" Grid.Row="0" Grid.Column="1" FontSize="30" ItemsSource="{Binding}"></ComboBox>
+        <Label Content="Description" Height="50" FontSize="30" Grid.Row="1" ></Label>
+        <TextBox Name="txtDescription"  Height="50" Width="170" Grid.Column="1" Grid.Row="1" FontSize="30"></TextBox>
+        <Label Content="Deadline" Height="50" FontSize="30" Grid.Row="2" ></Label>
+        <DatePicker Grid.Row="2" Grid.Column="1" Name="txtDeadline" Height="50" Width="170"></DatePicker>
+        <Label Content="Required Time (In Hours)" Height="50" FontSize="30" Grid.Row="3" Grid.Column="0"></Label>
+        <TextBox Name="txtReqTime" Height="50" Width="170" Grid.Column="1" Grid.Row="3" FontSize="30"></TextBox>
+        <Label Content="Long Description" Height="50" FontSize="30" Grid.Row="4"></Label>
+        <TextBox Name="txtLongDescription" Height="50" FontSize="30" Grid.Column="1" Grid.Row="4" Width="170"></TextBox>
+        <Label Content="Planning Description" Height="50" FontSize="30" Grid.Row="5"></Label>
+        <TextBox Name="txtPlanningDescription" Height="50" Width="170" FontSize="30" Grid.Column="1" Grid.Row="5"></TextBox>
+        <Button Content="Edit" Name="btnEdit" Click="btnEdit_Click" Height="50" Width="100" FontSize="30" Grid.Column="1" Grid.Row="6">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
