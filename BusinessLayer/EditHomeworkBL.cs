@@ -23,10 +23,11 @@ namespace BusinessLayer
 
                 if (string.IsNullOrEmpty(homework.Description))
                     success = false;
-
+                else if (homework.Deadline <= DateTime.Now)
+                    success = false;
                 else if (string.IsNullOrEmpty(Convert.ToString(homework.Deadline)))
                     success = false;
-                else if (string.IsNullOrEmpty(Convert.ToString(homework.ReqTime)))
+                else if (string.IsNullOrEmpty(homework.ReqTime))
                     success = false;
 
                 else if (string.IsNullOrEmpty(homework.LongDescription))

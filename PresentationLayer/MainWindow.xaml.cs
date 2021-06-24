@@ -48,9 +48,9 @@ namespace PresentationLayer
                 homework.HomeWorkID = Convert.ToInt32(txtHomeWorkId.Text);
                 homework.Description = txtDescription.Text;
                 homework.Deadline = Convert.ToDateTime(txtDeadline.Text);
-                homework.ReqTime = Convert.ToInt32(txtReqTime.Text);
+                homework.ReqTime = txtReqTime.Text;
                 homework.LongDescription = txtLongDescription.Text;
-                homework.PlanningDescription = txtPlanningDescription.Text;
+               
 
                 EditHomeworkBL editHomeworkBL = new EditHomeworkBL();
                 bool success;

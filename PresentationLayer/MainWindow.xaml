@@ -18,7 +18,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+           
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/bgimg.jpg" Stretch="UniformToFill"/>
@@ -45,13 +45,11 @@
         <TextBox Name="txtDescription"  Height="50" Width="170" Grid.Column="1" Grid.Row="1" FontSize="30"></TextBox>
         <Label Content="Deadline" Height="50" FontSize="30" Grid.Row="2" ></Label>
         <DatePicker Grid.Row="2" Grid.Column="1" Name="txtDeadline" Height="50" Width="170"></DatePicker>
-        <Label Content="Required Time (In Hours)" Height="50" FontSize="30" Grid.Row="3" Grid.Column="0"></Label>
+        <Label Content="Required Time" Height="50" FontSize="30" Grid.Row="3" Grid.Column="0"></Label>
         <TextBox Name="txtReqTime" Height="50" Width="170" Grid.Column="1" Grid.Row="3" FontSize="30"></TextBox>
         <Label Content="Long Description" Height="50" FontSize="30" Grid.Row="4"></Label>
         <TextBox Name="txtLongDescription" Height="50" FontSize="30" Grid.Column="1" Grid.Row="4" Width="170"></TextBox>
-        <Label Content="Planning Description" Height="50" FontSize="30" Grid.Row="5"></Label>
-        <TextBox Name="txtPlanningDescription" Height="50" Width="170" FontSize="30" Grid.Column="1" Grid.Row="5"></TextBox>
-        <Button Content="Edit" Name="btnEdit" Click="btnEdit_Click" Height="50" Width="100" FontSize="30" Grid.Column="1" Grid.Row="6">
+        <Button Content="Edit" Name="btnEdit" Click="btnEdit_Click" Height="50" Width="100" FontSize="30" Grid.Column="1" Grid.Row="5">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

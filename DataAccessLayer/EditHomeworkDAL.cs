@@ -25,7 +25,7 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@deadline", homework.Deadline);
             cmd.Parameters.AddWithValue("@reqTime", homework.ReqTime);
             cmd.Parameters.AddWithValue("@longDescription", homework.LongDescription);
-            cmd.Parameters.AddWithValue("@planningDescription", homework.PlanningDescription);
+          
 
             bool success = true;
             try

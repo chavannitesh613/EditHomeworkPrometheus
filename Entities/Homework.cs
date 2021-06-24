@@ -14,10 +14,10 @@ namespace Entities
 
         public DateTime Deadline { get; set; }
 
-        public int ReqTime { get; set; }
+        public string ReqTime { get; set; }
 
         public string LongDescription { get; set; }
 
-        public string PlanningDescription { get; set; }
+       
     }
 }
