@@ -18,13 +18,15 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            
            
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/bgimg.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <DockPanel>
-            <Menu DockPanel.Dock="Top" Background="#FFEACECE">
+            <Menu DockPanel.Dock="Top" Background="#FFEACECE" Margin="0,0,-396,0">
                 <MenuItem Header="Sign-In">
                     <MenuItem Header="Student" Name="menuStudentLogin" Click="menuStudentLogin_Click"/>
                     <MenuItem Header="Teacher" Name="menuTeacherLogin" Click="menuTeacherLogin_Click"/>
@@ -39,22 +41,23 @@
             </Menu>
             <StackPanel/>
         </DockPanel>
-        <Label Content="HomeWork Id" Height="50" FontSize="30"></Label>
-        <ComboBox Name="txtHomeWorkId" Height="50" Width="170" Grid.Row="0" Grid.Column="1" FontSize="30" ItemsSource="{Binding}"></ComboBox>
-        <Label Content="Description" Height="50" FontSize="30" Grid.Row="1" ></Label>
-        <TextBox Name="txtDescription"  Height="50" Width="170" Grid.Column="1" Grid.Row="1" FontSize="30"></TextBox>
-        <Label Content="Deadline" Height="50" FontSize="30" Grid.Row="2" ></Label>
-        <DatePicker Grid.Row="2" Grid.Column="1" Name="txtDeadline" Height="50" Width="170"></DatePicker>
-        <Label Content="Required Time" Height="50" FontSize="30" Grid.Row="3" Grid.Column="0"></Label>
-        <TextBox Name="txtReqTime" Height="50" Width="170" Grid.Column="1" Grid.Row="3" FontSize="30"></TextBox>
-        <Label Content="Long Description" Height="50" FontSize="30" Grid.Row="4"></Label>
-        <TextBox Name="txtLongDescription" Height="50" FontSize="30" Grid.Column="1" Grid.Row="4" Width="170"></TextBox>
-        <Button Content="Edit" Name="btnEdit" Click="btnEdit_Click" Height="50" Width="100" FontSize="30" Grid.Column="1" Grid.Row="5">
+        <Label Content="HomeWork Id" Height="50" FontSize="30" Grid.Row="1"></Label>
+        <ComboBox Name="txtHomeWorkId" Height="50" Width="170" Grid.Row="1" Grid.Column="1" FontSize="30" ItemsSource="{Binding}" BorderBrush="Black" BorderThickness="2"></ComboBox>
+        <Label Content="Description" Height="50" FontSize="30" Grid.Row="2" ></Label>
+        <TextBox Name="txtDescription"  Height="50" Width="170" Grid.Column="1" Grid.Row="2" FontSize="30" BorderBrush="Black" BorderThickness="2"></TextBox>
+        <Label Content="Deadline" Height="50" FontSize="30" Grid.Row="3" ></Label>
+        <DatePicker Grid.Row="3" Grid.Column="1" Name="txtDeadline" Height="50" Width="170" BorderBrush="Black" BorderThickness="2"></DatePicker>
+        <Label Content="Required Time" Height="50" FontSize="30" Grid.Row="4" Grid.Column="0"></Label>
+        <TextBox Name="txtReqTime" Height="50" Width="170" Grid.Column="1" Grid.Row="4" FontSize="30" BorderBrush="Black" BorderThickness="2"></TextBox>
+        <Label Content="Long Description" Height="50" FontSize="30" Grid.Row="5"></Label>
+        <TextBox Name="txtLongDescription" Height="50" FontSize="30" Grid.Column="1" Grid.Row="5" Width="170" BorderBrush="Black" BorderThickness="2"></TextBox>
+        <Button Content="Edit" Name="btnEdit" Click="btnEdit_Click" Height="50" Width="100" FontSize="30" Grid.Column="1" Grid.Row="6" BorderBrush="Black" BorderThickness="3" Background="LemonChiffon">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
+      
     </Grid>
 </Window>
